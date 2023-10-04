@@ -19,20 +19,42 @@ console.log(parseInt(etaUser));
 //     - calcolare prezzo base (0.21 € al km)
 let price 
 price = (parseFloat(0.21));  
-let priceBase = numKm * price;
-// priceBase = priceBase.toFixed      
+let priceBase = numKm * price;    
 console.log(parseFloat(priceBase));
+let priceFinal
+priceFinal = priceBase;
 
 //     - va applicato uno sconto del 20% per i minorenni
 if (etaUser < 18) {
     let offUnder = (priceBase * (20 / 100));
     let priceUnder = (priceBase - offUnder);
-        console.log(priceUnder);    
-}
-if (etaUser > 65) {
-    
+    console.log(parseFloat(priceUnder)); 
 }
 
 //     - va applicato uno sconto del 40% per gli over 65.
-// - stampare il prezzo finale    
-//     - Modificare l'innerHTML del h1 con il prezzo finale del biglietto 
+if (etaUser > 65) {
+    let offOver = (priceBase * (40 / 100));
+    let priceOver = (priceBase - offOver);
+    console.log(parseFloat(priceOver));
+}
+
+// - stampare il prezzo finale
+// let priceFinal
+//  if (etaUser < 18) {
+//     priceUnder = priceFinal;
+//     // console.log(parseFloat(priceFinal));
+//     console.log(priceFinal);
+// }
+//  else if (etaUser > 65) {
+//    priceOver = priceFinal;
+//  }
+//  else {
+//      priceBase = priceFinal;
+//  }
+ 
+
+let messageDomElement = document.getElementById('price');
+console.dir(messageDomElement);
+
+//     - Modificare l'innerHTML dello span con il prezzo finale del biglietto 
+messageDomElement.innerHTML = priceFinal;
