@@ -28,6 +28,7 @@ priceFinal = priceBase;
 if (etaUser < 18) {
     let offUnder = (priceBase * (20 / 100));
     let priceUnder = (priceBase - offUnder);
+    priceFinal = priceUnder;
     console.log(parseFloat(priceUnder)); 
 }
 
@@ -35,23 +36,12 @@ if (etaUser < 18) {
 if (etaUser > 65) {
     let offOver = (priceBase * (40 / 100));
     let priceOver = (priceBase - offOver);
+    c
     console.log(parseFloat(priceOver));
 }
 
 // - stampare il prezzo finale
-// let priceFinal
-//  if (etaUser < 18) {
-//     priceUnder = priceFinal;
-//     // console.log(parseFloat(priceFinal));
-//     console.log(priceFinal);
-// }
-//  else if (etaUser > 65) {
-//    priceOver = priceFinal;
-//  }
-//  else {
-//      priceBase = priceFinal;
-//  }
- 
+
 
 let messageDomElement = document.getElementById('price');
 console.dir(messageDomElement);
