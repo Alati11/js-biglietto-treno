@@ -36,12 +36,12 @@ if (etaUser < 18) {
 if (etaUser > 65) {
     let offOver = (priceBase * (40 / 100));
     let priceOver = (priceBase - offOver);
-    c
+    priceFinal = priceOver;
     console.log(parseFloat(priceOver));
 }
 
 // - stampare il prezzo finale
-
+priceFinal = priceFinal.toFixed(2)
 
 let messageDomElement = document.getElementById('price');
 console.dir(messageDomElement);
