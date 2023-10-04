@@ -24,6 +24,15 @@ let priceBase = numKm * price;
 console.log(parseFloat(priceBase));
 
 //     - va applicato uno sconto del 20% per i minorenni
+if (etaUser < 18) {
+    let offUnder = (priceBase * (20 / 100));
+    let priceUnder = (priceBase - offUnder);
+        console.log(priceUnder);    
+}
+if (etaUser > 65) {
+    
+}
+
 //     - va applicato uno sconto del 40% per gli over 65.
 // - stampare il prezzo finale    
 //     - Modificare l'innerHTML del h1 con il prezzo finale del biglietto 
